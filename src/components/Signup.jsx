@@ -1,10 +1,8 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Link, BrowserRouter } from 'react-router-dom';
-import {Login} from './Login';
+import { Link } from 'react-router-dom';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
-
-export const SignUp = () => {
+const SignUp = () => {
   return (
     <div style={styles.body}>
       <div style={styles.container}>
@@ -34,8 +32,8 @@ export const SignUp = () => {
                 style={styles.input}
               />
               <ul style={styles.passwordRequirements}>
-                <li>Least 8 characters</li>
-                <li>Least one number (0-9) or a symbol</li>
+                <li>At least 8 characters</li>
+                <li>At least one number (0-9) or a symbol</li>
                 <li>Lowercase (a-z) and uppercase (A-Z)</li>
               </ul>
             </div>
@@ -52,18 +50,13 @@ export const SignUp = () => {
               />
             </div>
             <div style={styles.login}>
-              <Router>
-              <p>
-                Already Registered?{' '}
-                <span>
-                  <Link to="/">Login</Link> 
-                </span>
+              <p style={styles.loginText}>
+                Already have an account? <Link to="/login">Login</Link>
               </p>
-              </Router>
             </div>
             <div style={styles.socialLogin}>
               <div style={styles.button1}>
-                <button type="submit" onClick={() => console.log('passwordCheck()')} style={styles.button}>
+                <button type="submit" style={styles.button}>
                   Sign Up
                 </button>
               </div>
@@ -78,17 +71,9 @@ export const SignUp = () => {
   );
 };
 
-// App Component
-const App1 = () => {
-   return(
-    <Router>
-      <Routes>
-        <Route path="/" element={<Login />} />
-        {/* <Route path="/Login" element={<Login />} /> */}
-      </Routes>
-    </Router>
-   );
-}
+export default SignUp;
+
+
 
 const styles = {
   body: {
@@ -171,4 +156,4 @@ const styles = {
 };
 
 // Correct exports
-export default  App1;
+// export default  App1;

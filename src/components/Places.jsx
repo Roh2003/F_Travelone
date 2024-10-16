@@ -62,20 +62,19 @@ const Places = () => {
           <div className="drop-shadow-2xl text-left rounded space-y-2 bg-white cursor-pointer opacity-80 hover:opacity-100 duration-200">
             <img
               className="w-full h-1/2 object-cover rounded-t-lg"
-              src="images/image-8.jpg"
+              src="images/kashmir.jpg"
               alt=""
             />
             <div className="p-4 space-y-4">
               <div className="flex justify-between">
-                <p className="text-sm text-red-400">Lorem, ipsum.</p>
-                <p className="font-bold">$500</p>
+                <p className="text-sm text-red-400">Ladakh</p>
+                <p className="font-bold">9999 /-Rs</p>
               </div>
               <p className="font-semibold">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Facere!
+                ladakh trip ejoy you 
               </p>
               <div className="flex justify-between items-center">
-                <h2>15 days tour</h2>
+                <h2>10 days tour</h2>
                 <p className="flex items-center space-x-2 text-orange-400">
                   <AiFillStar />
                   <span>4.8</span>

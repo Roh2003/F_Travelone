@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from 'react-router-dom';
+
 import {
   AiFillFacebook,
   AiFillInstagram,
@@ -56,7 +58,8 @@ const Home = () => {
             Road Map
           </button>
           <button className="text-gray-300 border rounded-md py-2 px-5 hover:bg-white hover:text-black hover:duration-300">
-            Book a Trip
+          <Link to="/all-trip">Book a Trip</Link>
+
           </button>
         </div>
 
