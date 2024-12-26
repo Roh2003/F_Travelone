@@ -19,24 +19,24 @@ const Home = () => {
         />
       </div>
 
-      <nav className="w-full absolute top-0 p-5 flex justify-between text-white z-10">
+      <nav className="w-full absolute backdrop-blur-[2px] top-0 p-5 flex justify-between text-white z-10">
         <div>
           <h1 className="text-3xl font-bold cursor-pointer">Travelone</h1>
         </div>
 
         <div>
           <ul className="flex space-x-5 font-bold cursor-pointer text-gray-300">
-            <li className="text-black hover:text-white hover:bottom-b">HOME</li>
-            <li className="text-black hover:text-white hover:bottom-b">ABOUT US</li>
-            <li className="text-black hover:text-white hover:bottom-b">CONTACT US</li>
-            <li className="text-black hover:text-white hover:bottom-b">HELP</li>
+            <li className="text-white  hover:text-black hover:bottom-b">HOME</li>            
+            <li className="text-white  hover:text-black hover:bottom-b"><button><Link to="/about">ABOUT US</Link></button></li>
+            <li className="text-white  hover:text-black hover:bottom-b"><button><Link to="/cont">CONTACT US</Link></button></li>
+            <li className="text-white  hover:text-black hover:bottom-b"><button><Link to="/help">HELP   </Link></button></li>
           </ul>
 
           <div className="flex items-center space-x-2 mt-5">
-            <AiOutlineSearch className="text-xl cursor-pointer text-black " />
+            <AiOutlineSearch className="text-xl cursor-pointer text-white " />
 
             <input
-              className="bg-inherit border-b outline-0 border-black p-1 w-full text-black"
+              className="bg-inherit border-b outline-0 border-white p-1 w-full text-white"
               type="text"
               placeholder="search"
             />
@@ -55,10 +55,10 @@ const Home = () => {
 
         <div className="space-x-4">
           <button className="bg-gray-300 py-2 px-5 rounded-md hover:bg-white hover:duration-300">
-            Road Map
+          <Link to="/payment">Raod Map</Link>
           </button>
           <button className="text-gray-300 border rounded-md py-2 px-5 hover:bg-white hover:text-black hover:duration-300">
-          <Link to="/all-trip">Book a Trip</Link>
+          <Link to="/all-trip">Discover</Link>
 
           </button>
         </div>

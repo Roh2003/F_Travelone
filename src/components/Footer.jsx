@@ -18,7 +18,7 @@ const Footer = () => {
     <footer className="w-4/5 m-auto py-10 cursor-default">
       <div className="md:flex md:justify-between sm:grid sm:grid-cols-2 sm:justify-center items-center my-10">
         <div className="space-y-5 py-5 border-b">
-          <h1 className="text-3xl font-bold cursor-pointer">Qatar</h1>
+          <h1 className="text-3xl font-bold cursor-pointer">Travelone</h1>
           <div className="flex space-x-5">
             <AiFillFacebook size={"1.5rem"} className="cursor-pointer" />
             <AiFillInstagram size={"1.5rem"} className="cursor-pointer" />

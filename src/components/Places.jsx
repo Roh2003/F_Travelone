@@ -71,7 +71,7 @@ const Places = () => {
                 <p className="font-bold">9999 /-Rs</p>
               </div>
               <p className="font-semibold">
-                ladakh trip ejoy you 
+              The ultimate destination for adventurers, surrounded by majestic mountains
               </p>
               <div className="flex justify-between items-center">
                 <h2>10 days tour</h2>
@@ -85,17 +85,40 @@ const Places = () => {
           <div className="drop-shadow-2xl text-left rounded space-y-2 bg-white cursor-pointer opacity-80 hover:opacity-100 duration-200">
             <img
               className="w-full h-1/2 object-cover rounded-t-lg"
-              src="images/image-3.jpg"
+              src="images/paris.jpg"
               alt=""
             />
             <div className="p-4 space-y-4">
               <div className="flex justify-between">
-                <p className="text-sm text-red-400">Lorem, ipsum.</p>
-                <p className="font-bold">$500</p>
+                <p className="text-sm text-red-400">paris, France</p>
+                <p className="font-bold">75000/-Rs</p>
               </div>
               <p className="font-semibold">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Facere!
+              </p>
+              <div className="flex justify-between items-center">
+                <h2>15 days tour</h2>
+                <p className="flex items-center space-x-2 text-orange-400">
+                  <AiFillStar />
+                  <span>4.7</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="drop-shadow-2xl text-left rounded space-y-2 bg-white cursor-pointer opacity-80 hover:opacity-100 duration-200">
+            <img
+              className="w-full h-1/2 object-cover rounded-t-lg"
+              src="images/bali.jpg"
+              alt=""
+            />
+            <div className="p-4 space-y-4">
+              <div className="flex justify-between">
+                <p className="text-sm text-red-400">Bali</p>
+                <p className="font-bold">50000/-Rs</p>
+              </div>
+              <p className="font-semibold">
+              A tropical paradise, famous for its serene beaches and vibrant culture. 
               </p>
               <div className="flex justify-between items-center">
                 <h2>15 days tour</h2>
@@ -109,20 +132,88 @@ const Places = () => {
           <div className="drop-shadow-2xl text-left rounded space-y-2 bg-white cursor-pointer opacity-80 hover:opacity-100 duration-200">
             <img
               className="w-full h-1/2 object-cover rounded-t-lg"
-              src="images/image-2.jpg"
+              src="images/dubai.jpg"
+              alt=""     
+            />
+            <div className="p-4 space-y-4">
+              <div className="flex justify-between">
+                <p className="text-sm text-red-400">Dubai, UAE</p>
+                <p className="font-bold">5000/-Rs</p>
+              </div>
+              <p className="font-semibold">
+              The playground of luxury, known for its towering Burj Khalifa and desert adventures.
+              </p>
+              <div className="flex justify-between items-center">
+                <h2>10 days tour</h2>
+                <p className="flex items-center space-x-2 text-orange-400">
+                  <AiFillStar />
+                  <span>4.5</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="drop-shadow-2xl text-left rounded space-y-2 bg-white cursor-pointer opacity-80 hover:opacity-100 duration-200">
+            <img
+              className="w-full h-1/2 object-cover rounded-t-lg"
+              src="images/tokyo.jpg"
               alt=""
             />
             <div className="p-4 space-y-4">
               <div className="flex justify-between">
-                <p className="text-sm text-red-400">Lorem, ipsum.</p>
-                <p className="font-bold">$500</p>
+                <p className="text-sm text-red-400">Tokyo, Japan</p>
+                <p className="font-bold">45000/-Rs</p>
               </div>
               <p className="font-semibold">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Facere!
+              A futuristic metropolis blending tradition with cutting-edge innovation.
+              </p>
+              <div className="flex justify-between items-center">
+                <h2>8 days tour</h2>
+                <p className="flex items-center space-x-2 text-orange-400">
+                  <AiFillStar />
+                  <span>3.9</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="drop-shadow-2xl text-left rounded space-y-2 bg-white cursor-pointer opacity-80 hover:opacity-100 duration-200">
+            <img
+              className="w-full h-1/2 object-cover rounded-t-lg"
+              src="images/bali.jpg"
+              alt=""
+            />
+            <div className="p-4 space-y-4">
+              <div className="flex justify-between">
+                <p className="text-sm text-red-400">Bali, Indonesia</p>
+                <p className="font-bold">56000/-Rs</p>
+              </div>
+              <p className="font-semibold">
+              A tropical paradise, famous for its serene beaches and vibrant culture.
               </p>
               <div className="flex justify-between items-center">
                 <h2>15 days tour</h2>
+                <p className="flex items-center space-x-2 text-orange-400">
+                  <AiFillStar />
+                  <span>4.1</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="drop-shadow-2xl text-left rounded space-y-2 bg-white cursor-pointer opacity-80 hover:opacity-100 duration-200">
+            <img
+              className="w-full h-1/2 object-cover rounded-t-lg"
+              src="images/mysor.jpg"
+              alt=""
+            />
+            <div className="p-4 space-y-4">
+              <div className="flex justify-between">
+                <p className="text-sm text-red-400">Mysore, Karnataka</p>
+                <p className="font-bold">8999/-Rs</p>
+              </div>
+              <p className="font-semibold">
+              A city of palaces, with a rich cultural heritage and grand festivities. 
+              </p>
+              <div className="flex justify-between items-center">
+                <h2>11 days tour</h2>
                 <p className="flex items-center space-x-2 text-orange-400">
                   <AiFillStar />
                   <span>4.8</span>
@@ -133,119 +224,22 @@ const Places = () => {
           <div className="drop-shadow-2xl text-left rounded space-y-2 bg-white cursor-pointer opacity-80 hover:opacity-100 duration-200">
             <img
               className="w-full h-1/2 object-cover rounded-t-lg"
-              src="images/image-7.jpg"
+              src="images/peru.jpg"
               alt=""
             />
             <div className="p-4 space-y-4">
               <div className="flex justify-between">
-                <p className="text-sm text-red-400">Lorem, ipsum.</p>
-                <p className="font-bold">$500</p>
+                <p className="text-sm text-red-400">Andaman & Nicobar Islands</p>
+                <p className="font-bold">15000/-Rs</p>
               </div>
               <p className="font-semibold">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Facere!
+              national", description: "A tropical paradise with pristine beaches and crystal-clear waters.
               </p>
               <div className="flex justify-between items-center">
-                <h2>15 days tour</h2>
+                <h2>10 days tour</h2>
                 <p className="flex items-center space-x-2 text-orange-400">
                   <AiFillStar />
-                  <span>4.8</span>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="drop-shadow-2xl text-left rounded space-y-2 bg-white cursor-pointer opacity-80 hover:opacity-100 duration-200">
-            <img
-              className="w-full h-1/2 object-cover rounded-t-lg"
-              src="images/image-8.jpg"
-              alt=""
-            />
-            <div className="p-4 space-y-4">
-              <div className="flex justify-between">
-                <p className="text-sm text-red-400">Lorem, ipsum.</p>
-                <p className="font-bold">$500</p>
-              </div>
-              <p className="font-semibold">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Facere!
-              </p>
-              <div className="flex justify-between items-center">
-                <h2>15 days tour</h2>
-                <p className="flex items-center space-x-2 text-orange-400">
-                  <AiFillStar />
-                  <span>4.8</span>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="drop-shadow-2xl text-left rounded space-y-2 bg-white cursor-pointer opacity-80 hover:opacity-100 duration-200">
-            <img
-              className="w-full h-1/2 object-cover rounded-t-lg"
-              src="images/image-3.jpg"
-              alt=""
-            />
-            <div className="p-4 space-y-4">
-              <div className="flex justify-between">
-                <p className="text-sm text-red-400">Lorem, ipsum.</p>
-                <p className="font-bold">$500</p>
-              </div>
-              <p className="font-semibold">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Facere!
-              </p>
-              <div className="flex justify-between items-center">
-                <h2>15 days tour</h2>
-                <p className="flex items-center space-x-2 text-orange-400">
-                  <AiFillStar />
-                  <span>4.8</span>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="drop-shadow-2xl text-left rounded space-y-2 bg-white cursor-pointer opacity-80 hover:opacity-100 duration-200">
-            <img
-              className="w-full h-1/2 object-cover rounded-t-lg"
-              src="images/image-2.jpg"
-              alt=""
-            />
-            <div className="p-4 space-y-4">
-              <div className="flex justify-between">
-                <p className="text-sm text-red-400">Lorem, ipsum.</p>
-                <p className="font-bold">$500</p>
-              </div>
-              <p className="font-semibold">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Facere!
-              </p>
-              <div className="flex justify-between items-center">
-                <h2>15 days tour</h2>
-                <p className="flex items-center space-x-2 text-orange-400">
-                  <AiFillStar />
-                  <span>4.8</span>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="drop-shadow-2xl text-left rounded space-y-2 bg-white cursor-pointer opacity-80 hover:opacity-100 duration-200">
-            <img
-              className="w-full h-1/2 object-cover rounded-t-lg"
-              src="images/image-7.jpg"
-              alt=""
-            />
-            <div className="p-4 space-y-4">
-              <div className="flex justify-between">
-                <p className="text-sm text-red-400">Lorem, ipsum.</p>
-                <p className="font-bold">$500</p>
-              </div>
-              <p className="font-semibold">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Facere!
-              </p>
-              <div className="flex justify-between items-center">
-                <h2>15 days tour</h2>
-                <p className="flex items-center space-x-2 text-orange-400">
-                  <AiFillStar />
-                  <span>4.8</span>
+                  <span>4.2</span>
                 </p>
               </div>
             </div>
