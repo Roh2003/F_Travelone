@@ -13,7 +13,7 @@ import Varanasi from "./components/national/varanasi"
 import Goa from "./components/national/goa"
 import Paris from "./components/international/Paris";
 import NewYorkCity from "./components/international/New";
-import About from "./components/about";
+import About from "./components/About";
 import Contact from "./components/Contact";
 import HelpAndFeedback from "./components/help";
 
