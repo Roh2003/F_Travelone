@@ -8,7 +8,7 @@ import {
     AiOutlineSearch,
   } from "react-icons/ai";
 
-function Agra() {
+function taj() {
 
     const tourPlan = [
         {
@@ -184,4 +184,4 @@ function Agra() {
     );
 }
 
-export default Agra;
+export default taj;
