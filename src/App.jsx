@@ -8,7 +8,7 @@ import SignUp from "./components/Signup";
 import AllTrip from "./components/Alltrip";
 import Payment from "./components/Payment";
 import Kashmir from "./components/national/kashmir";
-import Taj from "./components/national/taj";
+import taj from "./components/national/Taj";
 import Jaipur from "./components/national/Jaipur";
 import Varanasi from "./components/national/varanasi"
 import Goa from "./components/national/goa"
