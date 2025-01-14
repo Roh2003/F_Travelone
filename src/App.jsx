@@ -16,7 +16,7 @@ import NewYorkCity from "./components/international/New";
 import About from "./components/about";
 import Contact from "./components/Contact";
 import HelpAndFeedback from "./components/help";
-import Taj from "./components/national/Taj"
+
 
 const Trips = [
   {id:1,title:"Taj Mahal",image:"taj.jpg", price: 9999, category: "national", description: "A timeless symbol of love and one of the Seven Wonders of the World ", days: "9 days", rating: 4.8 },
@@ -69,7 +69,7 @@ const App = () => {
         <Route path="/14" element={<NewYorkCity />} />
         <Route path="/cont" element={<Contact />} />
         <Route path="/help" element={<HelpAndFeedback />} />
-        <Route path="/3" element={<Taj />} />
+        
         
         <Route path="/about" element={<About />} />
       
