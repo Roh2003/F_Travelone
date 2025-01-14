@@ -62,7 +62,7 @@ const App = () => {
         <Route path="/all-trip" element={<AllTrip />} />
         <Route path="/payment" element={<Payment />} />
         <Route path="/Kash" element={<Kashmir />} />
-        <Route path="/1" element={<Taj />} />
+        <Route path="/1" element={<taj />} />
         <Route path="/2" element={<Jaipur />} />
         <Route path="/6" element={<Varanasi />} />
         <Route path="/3" element={<Goa />} />
