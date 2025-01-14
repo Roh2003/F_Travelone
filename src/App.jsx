@@ -8,7 +8,6 @@ import SignUp from "./components/Signup";
 import AllTrip from "./components/Alltrip";
 import Payment from "./components/Payment";
 import Kashmir from "./components/national/kashmir";
-import Taj from "./components/national/taj";
 import Jaipur from "./components/national/Jaipur";
 import Varanasi from "./components/national/varanasi"
 import Goa from "./components/national/goa"
@@ -17,6 +16,7 @@ import NewYorkCity from "./components/international/New";
 import About from "./components/about";
 import Contact from "./components/Contact";
 import HelpAndFeedback from "./components/help";
+import Taj from "./components/national/taj"
 
 const Trips = [
   {id:1,title:"Taj Mahal",image:"taj.jpg", price: 9999, category: "national", description: "A timeless symbol of love and one of the Seven Wonders of the World ", days: "9 days", rating: 4.8 },
@@ -62,7 +62,6 @@ const App = () => {
         <Route path="/all-trip" element={<AllTrip />} />
         <Route path="/payment" element={<Payment />} />
         <Route path="/Kash" element={<Kashmir />} />
-        <Route path="/1" element={<Taj />} />
         <Route path="/2" element={<Jaipur />} />
         <Route path="/6" element={<Varanasi />} />
         <Route path="/3" element={<Goa />} />
@@ -70,9 +69,10 @@ const App = () => {
         <Route path="/14" element={<NewYorkCity />} />
         <Route path="/cont" element={<Contact />} />
         <Route path="/help" element={<HelpAndFeedback />} />
+        <Route path="/3" element={<Taj />} />
         
         <Route path="/about" element={<About />} />
-        
+      
         
 
         
