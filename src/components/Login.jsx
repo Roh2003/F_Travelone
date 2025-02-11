@@ -36,19 +36,19 @@ const Login = () => {
   return (
     <>
       <div style={styles.body}>
-        <div style={styles.container}>
-          <div style={styles.formSection}>
-            <h1 style={styles.h1}>Login</h1>
+        <div className='grid grid-cols-1 sm:grid-cols-2 bg-slate-300 rounded-[50px]'>
+          <div className='flex justify-center items-center flex-col bg-slate-400 m-10 ml-24 rounded-lg '>
+            <h1 className='text-4xl mb-5 font-serif '>Login</h1>
             <form id="signupForm" onSubmit={handleLogin}>
-              <div style={styles.inputGroup}>
+              <div className='flex justify-evenly items-center mb-3'>
                 <label htmlFor="email"></label>
-                <i className="fa-solid fa-envelope" style={{ marginRight: '10px' }}></i>
-                <input type="email" id="email" placeholder="xyz@gmail.com" style={styles.input} onChange={(e)=>{setEmail(e.target.value)}} value={email}/>
+                <i className="fa-solid fa-envelope mr-3" ></i>
+                <input type="email" id="email" placeholder="xyz@gmail.com" className='p-3 px-10 rounded-md  '  onChange={(e)=>{setEmail(e.target.value)}} value={email}/>
               </div>
-              <div style={styles.inputGroup}>
-                <label htmlFor="password"></label>
-                <i className="fa-solid fa-key" style={{ marginRight: '10px' }}></i>
-                <input type="password" id="password" placeholder="Password" style={styles.input} onChange={(e)=>{setPassword(e.target.value)}} value={password}/>
+              <div className='flex justify-evenly items-center'>
+                <label htmlFor="email"></label>
+                <i className="fa-solid fa-envelope mr-3" ></i>
+                <input type="email" id="password" placeholder="password" className='p-3 px-10 rounded-md  '  onChange={(e)=>{setPassword(e.target.value)}} value={password}/>
               </div>
 
               <div style={styles.rememberMe}>
@@ -74,7 +74,7 @@ const Login = () => {
             </form>
           </div>
 
-          <div style={styles.imageSection}>
+          <div  className='sm:block hidden'>
             <img src="images/login.png" alt="style" style={styles.image} />
           </div>
         </div>
@@ -95,12 +95,7 @@ const styles = {
     alignItems: 'center',
     minHeight: '100vh',
   },
-  container: {
-    display: 'flex',
-    backgroundColor: '#fff',
-    borderRadius: '30px',
-    boxShadow: '5px 5px 10px 5px rgba(0, 0, 0, 0.1)',
-  },
+  
   formSection: {
     width: '400px',
     padding: '40px',
@@ -152,11 +147,7 @@ const styles = {
     textDecoration: 'none',
     color: 'white',
   },
-  imageSection: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
+  
   image: {
     width: '500px',
     height: '500px',
