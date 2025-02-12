@@ -2,8 +2,13 @@ import React from 'react';
 
 const About = () => {
   return (
-    <div className="bg-gray-100 p-8 min-h-screen">
-      <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-6">
+    <div className="flex justify-center items-center mt-16 h-full bg-gradient-to-r from-purple-500 to-pink-500 min-h-screen p-5">
+      <nav className="w-full absolute top-0 p-5 flex justify-between text-white z-10">
+        <div>
+          <h1 className="text-3xl font-bold cursor-pointer">TravelOne</h1>
+        </div>
+      </nav>
+      <div className="max-w-4xl mx-auto bg-white shadow-2xl rounded-lg p-8">
         <h1 className="text-4xl font-bold mb-4 text-center text-blue-600">About TravelOne</h1>
         <p className="text-gray-700 text-lg mb-4">
           Welcome to <span className="font-bold">TravelOne</span>, your trusted partner in exploring the world! 

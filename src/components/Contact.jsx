@@ -23,7 +23,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="bg-gray-100 p-8 min-h-screen">
+    <div className="bg-gray-100 p-8 mt-16 min-h-screen bg-gradient-to-r from-purple-500 to-pink-500">
       <div className="max-w-3xl mx-auto bg-white shadow-lg rounded-lg p-6">
         <h1 className="text-4xl font-bold mb-6 text-center text-blue-600">Contact Us</h1>
         <p className="text-lg text-gray-700 mb-6 text-center">

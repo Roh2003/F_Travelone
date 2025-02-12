@@ -13,10 +13,10 @@ export default function Header() {
           
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-6">
-            <a href="#" className="text-white hover:text-yellow-300">Home</a>
-            <a href="#" className="text-white hover:text-yellow-300">About Us</a>
-            <a href="#" className="text-white hover:text-yellow-300">Contact Us</a>
-            <a href="#" className="text-white hover:text-yellow-300">Help</a>
+            <a href="/" className="text-white hover:text-yellow-300">Home</a>
+            <a href="about" className="text-white hover:text-yellow-300">About Us</a>
+            <a href="contact" className="text-white hover:text-yellow-300">Contact Us</a>
+            <a href="help" className="text-white hover:text-yellow-300">Help</a>
           </div>
 
           {/* Search Bar */}

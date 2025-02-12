@@ -8,7 +8,7 @@ const Discover = () => {
   const isInView = useInView(sectionRef, { once: true });
 
   return (
-    <div ref={sectionRef} className="w-4/5 m-auto cursor-default text-gray-900">
+    <div ref={sectionRef} className="w-4/5 m-auto cursor-default text-gray-900 overflow-hidden">
       <motion.p 
         initial={{ opacity: 0, y: -100 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}

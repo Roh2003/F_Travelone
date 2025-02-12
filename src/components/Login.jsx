@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 // import SignUp from "./Signup";
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import HomePage from './HomePage';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
