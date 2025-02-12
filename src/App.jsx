@@ -16,6 +16,7 @@ import NewYorkCity from "./components/international/New";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import HelpAndFeedback from "./components/help";
+import Header from "./components/Header"
 
 
 const Trips = [
@@ -51,38 +52,9 @@ const Trips = [
 const App = () => {
   return (
     <>
-    {/* <Login /> */}
-    {/* <SignUp /> */}
-    <Router>
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/sign-up" element={<SignUp />} />
-        <Route path="/home" element={<HomePage />} />
-        <Route path="/all-trip" element={<AllTrip />} />
-        <Route path="/payment" element={<Payment />} />
-        <Route path="/Kash" element={<Kashmir />} />
-        <Route path="/2" element={<Jaipur />} />
-        <Route path="/6" element={<Varanasi />} />
-        <Route path="/3" element={<Goa />} />
-        <Route path="/13" element={<Paris />} />
-        <Route path="/14" element={<NewYorkCity />} />
-        <Route path="/cont" element={<Contact />} />
-        <Route path="/help" element={<HelpAndFeedback />} />
-        
-        
-        <Route path="/about" element={<About />} />
-      
-        
 
-        
-
-        
-
-      
-
-      </Routes>
-    </Router>
+    < Header />
+  
     </>
   );
 };

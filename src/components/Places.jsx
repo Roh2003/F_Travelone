@@ -1,249 +1,118 @@
 import React from "react";
 import { AiFillStar } from "react-icons/ai";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const Places = () => {
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: true });
+
   return (
-    <div className="w-4/5 m-auto cursor-default">
+    <div ref={sectionRef} className="w-4/5 m-auto cursor-default text-gray-800">
       <div className="w-full xl:w-1/2 m-auto text-center my-10 space-y-5">
-        <h1 className="text-4xl font-bold">Places not to be missed</h1>
-        <p>
-        Explore the World’s Wonders – Where Every Journey Becomes an Unforgettable Adventure!
+        <h1 className="text-4xl font-extrabold text-gray-900">Places not to be missed</h1>
+        <p className="text-gray-600">
+          Explore the World’s Wonders – Where Every Journey Becomes an Unforgettable Adventure!
         </p>
       </div>
 
-      <div className="inline md:grid grid-rows-3 lg:grid-rows-2 grid-flow-col gap-4 w-full lg:h-[450px] pb-10 border-b space-y-6 md:space-y-0">
-        <div className="row-span-1 col-span-2">
-          <img
-            className="w-full h-full object-cover rounded-md cursor-pointer opacity-80 hover:opacity-100 duration-200"
-            src="images/kashmir.jpg"
-            alt=""
-          />
-        </div>
-        <div className="lg:row-span-1 lg:col-span-1 md:col-span-2">
-          <img
-            className="w-full h-full object-cover rounded-md cursor-pointer opacity-80 hover:opacity-100 duration-200"
-            src="images/rajasthan.jpg"
-            alt=""
-          />
-        </div>
-        <div className="lg:row-span-1 lg:col-span-1 md:col-span-2">
-          <img
-            className="w-full h-full object-cover rounded-md cursor-pointer opacity-80 hover:opacity-100 duration-200"
-            src="images/ujjain.jpg"
-            alt=""
-          />
-        </div>
-        <div className="lg:row-span-2 lg:col-span-1 md:col-span-2 md:row-span-1">
-          <img
-            className="w-full h-full object-cover rounded-md cursor-pointer opacity-80 hover:opacity-100 duration-200"
-            src="images/jaipur.jpg"
-            alt=""
-          />
-        </div>
-        <div className="lg:row-span-1 lg:col-span-1 md:col-span-2">
-          <img
-            className="w-full h-full object-cover rounded-md cursor-pointer opacity-80 hover:opacity-100 duration-200"
-            src="images/omkareshwar.jpg"
-            alt=""
-          />
-        </div>
-        <div className="lg:row-span-1 lg:col-span-1 md:col-span-2">
-          <img
-            className="w-full h-full object-cover rounded-md cursor-pointer opacity-80 hover:opacity-100 duration-200"
-            src="images/doha.jpg"
-            alt=""
-          />
-        </div>
-      </div>
+      <motion.div 
+        initial={{ opacity: 0, x: -100 }}
+        animate={isInView ? { opacity: 1, x: 0 } : {}}
+        transition={{ duration: 1 }}
+        className="grid md:grid-rows-3 lg:grid-rows-2 grid-flow-col gap-4 w-full lg:h-[450px] pb-10 border-b"
+      >
+        {["kashmir", "rajasthan", "ujjain", "jaipur", "omkareshwar", "doha"].map((place, index) => (
+          <div key={index} className="lg:row-span-1 lg:col-span-1 md:col-span-2">
+            <img
+              className="w-full h-full object-cover rounded-lg cursor-pointer shadow-lg opacity-90 hover:opacity-100 transition duration-300"
+              src={`images/${place}.jpg`}
+              alt=""
+            />
+          </div>
+        ))}
+      </motion.div>
 
       <div className="my-10 text-center">
-        <h1 className="text-4xl font-bold">Our Recomendation</h1>
+        <h1 className="text-4xl font-extrabold text-gray-900">Our Recommendations</h1>
         <section className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 grid-cols-1 gap-10 my-10 justify-items-center items-center pb-10 border-b">
-          <div className="drop-shadow-2xl text-left rounded space-y-2 bg-white cursor-pointer opacity-80 hover:opacity-100 duration-200">
-            <img
-              className="w-full h-1/2 object-cover rounded-t-lg"
-              src="images/kashmir.jpg"
-              alt=""
-            />
-            <div className="p-4 space-y-4">
-              <div className="flex justify-between">
-                <p className="text-sm text-red-400">Ladakh</p>
-                <p className="font-bold">9999 /-Rs</p>
+          {[{
+            name: "Santorini, Greece",
+            price: "9999 /-Rs",
+            duration: "9 days tour",
+            rating: "4.8",
+            img: "greece"
+          }, {
+            name: "Rio de Janeiro, Brazil",
+            price: "9999 /-Rs",
+            duration: "9 days tour",
+            rating: "4.8",
+            img: "rio"
+          }, {
+            name: "Bali, Indonesia",
+            price: "9999 /-Rs",
+            duration: "9 days tour",
+            rating: "4.8",
+            img: "bali"
+          }, {
+            name: "London, England",
+            price: "9999 /-Rs",
+            duration: "9 days tour",
+            rating: "4.8",
+            img: "london"
+          }, {
+            name: "Machu Picchu, Peru",
+            price: "9999 /-Rs",
+            duration: "9 days tour",
+            rating: "4.8",
+            img: "peru"
+          }, {
+            name: "Hampi, Karnataka",
+            price: "9999 /-Rs",
+            duration: "9 days tour",
+            rating: "4.8",
+            img: "hampi"
+          }, {
+            name: "Mysore, Karnataka",
+            price: "9999 /-Rs",
+            duration: "9 days tour",
+            rating: "4.8",
+            img: "mysor"
+          }, {
+            name: "Amritsar, Punjab",
+            price: "9999 /-Rs",
+            duration: "9 days tour",
+            rating: "4.8",
+            img: "panjab"
+          }].map((place, index) => (
+            <motion.div 
+              key={index} 
+              initial={{ opacity: 0, x: -100 }}
+              animate={isInView ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 2 }}
+              className="rounded-lg overflow-hidden shadow-lg bg-white transform hover:scale-105 transition duration-300"
+            >
+              <img
+                className="w-full h-48 object-cover"
+                src={`images/${place.img}.jpg`}
+                alt=""
+              />
+              <div className="p-4">
+                <div className="flex justify-between items-center">
+                  <h2 className="text-lg font-semibold text-gray-900">{place.name}</h2>
+                  <p className="font-bold text-indigo-600">{place.price}</p>
+                </div>
+                <p className="text-gray-600 text-sm mt-2">A must-visit destination full of wonder and beauty.</p>
+                <div className="flex justify-between items-center mt-3">
+                  <span className="text-gray-700 text-sm">{place.duration}</span>
+                  <span className="flex items-center text-yellow-500">
+                    <AiFillStar />
+                    <span className="ml-1">{place.rating}</span>
+                  </span>
+                </div>
               </div>
-              <p className="font-semibold">
-              The ultimate destination for adventurers, surrounded by majestic mountains
-              </p>
-              <div className="flex justify-between items-center">
-                <h2>10 days tour</h2>
-                <p className="flex items-center space-x-2 text-orange-400">
-                  <AiFillStar />
-                  <span>4.8</span>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="drop-shadow-2xl text-left rounded space-y-2 bg-white cursor-pointer opacity-80 hover:opacity-100 duration-200">
-            <img
-              className="w-full h-1/2 object-cover rounded-t-lg"
-              src="images/paris.jpg"
-              alt=""
-            />
-            <div className="p-4 space-y-4">
-              <div className="flex justify-between">
-                <p className="text-sm text-red-400">paris, France</p>
-                <p className="font-bold">75000/-Rs</p>
-              </div>
-              <p className="font-semibold">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Facere!
-              </p>
-              <div className="flex justify-between items-center">
-                <h2>15 days tour</h2>
-                <p className="flex items-center space-x-2 text-orange-400">
-                  <AiFillStar />
-                  <span>4.7</span>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="drop-shadow-2xl text-left rounded space-y-2 bg-white cursor-pointer opacity-80 hover:opacity-100 duration-200">
-            <img
-              className="w-full h-1/2 object-cover rounded-t-lg"
-              src="images/bali.jpg"
-              alt=""
-            />
-            <div className="p-4 space-y-4">
-              <div className="flex justify-between">
-                <p className="text-sm text-red-400">Bali</p>
-                <p className="font-bold">50000/-Rs</p>
-              </div>
-              <p className="font-semibold">
-              A tropical paradise, famous for its serene beaches and vibrant culture. 
-              </p>
-              <div className="flex justify-between items-center">
-                <h2>15 days tour</h2>
-                <p className="flex items-center space-x-2 text-orange-400">
-                  <AiFillStar />
-                  <span>4.8</span>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="drop-shadow-2xl text-left rounded space-y-2 bg-white cursor-pointer opacity-80 hover:opacity-100 duration-200">
-            <img
-              className="w-full h-1/2 object-cover rounded-t-lg"
-              src="images/dubai.jpg"
-              alt=""     
-            />
-            <div className="p-4 space-y-4">
-              <div className="flex justify-between">
-                <p className="text-sm text-red-400">Dubai, UAE</p>
-                <p className="font-bold">5000/-Rs</p>
-              </div>
-              <p className="font-semibold">
-              The playground of luxury, known for its towering Burj Khalifa and desert adventures.
-              </p>
-              <div className="flex justify-between items-center">
-                <h2>10 days tour</h2>
-                <p className="flex items-center space-x-2 text-orange-400">
-                  <AiFillStar />
-                  <span>4.5</span>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="drop-shadow-2xl text-left rounded space-y-2 bg-white cursor-pointer opacity-80 hover:opacity-100 duration-200">
-            <img
-              className="w-full h-1/2 object-cover rounded-t-lg"
-              src="images/tokyo.jpg"
-              alt=""
-            />
-            <div className="p-4 space-y-4">
-              <div className="flex justify-between">
-                <p className="text-sm text-red-400">Tokyo, Japan</p>
-                <p className="font-bold">45000/-Rs</p>
-              </div>
-              <p className="font-semibold">
-              A futuristic metropolis blending tradition with cutting-edge innovation.
-              </p>
-              <div className="flex justify-between items-center">
-                <h2>8 days tour</h2>
-                <p className="flex items-center space-x-2 text-orange-400">
-                  <AiFillStar />
-                  <span>3.9</span>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="drop-shadow-2xl text-left rounded space-y-2 bg-white cursor-pointer opacity-80 hover:opacity-100 duration-200">
-            <img
-              className="w-full h-1/2 object-cover rounded-t-lg"
-              src="images/bali.jpg"
-              alt=""
-            />
-            <div className="p-4 space-y-4">
-              <div className="flex justify-between">
-                <p className="text-sm text-red-400">Bali, Indonesia</p>
-                <p className="font-bold">56000/-Rs</p>
-              </div>
-              <p className="font-semibold">
-              A tropical paradise, famous for its serene beaches and vibrant culture.
-              </p>
-              <div className="flex justify-between items-center">
-                <h2>15 days tour</h2>
-                <p className="flex items-center space-x-2 text-orange-400">
-                  <AiFillStar />
-                  <span>4.1</span>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="drop-shadow-2xl text-left rounded space-y-2 bg-white cursor-pointer opacity-80 hover:opacity-100 duration-200">
-            <img
-              className="w-full h-1/2 object-cover rounded-t-lg"
-              src="images/mysor.jpg"
-              alt=""
-            />
-            <div className="p-4 space-y-4">
-              <div className="flex justify-between">
-                <p className="text-sm text-red-400">Mysore, Karnataka</p>
-                <p className="font-bold">8999/-Rs</p>
-              </div>
-              <p className="font-semibold">
-              A city of palaces, with a rich cultural heritage and grand festivities. 
-              </p>
-              <div className="flex justify-between items-center">
-                <h2>11 days tour</h2>
-                <p className="flex items-center space-x-2 text-orange-400">
-                  <AiFillStar />
-                  <span>4.8</span>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="drop-shadow-2xl text-left rounded space-y-2 bg-white cursor-pointer opacity-80 hover:opacity-100 duration-200">
-            <img
-              className="w-full h-1/2 object-cover rounded-t-lg"
-              src="images/peru.jpg"
-              alt=""
-            />
-            <div className="p-4 space-y-4">
-              <div className="flex justify-between">
-                <p className="text-sm text-red-400">Andaman & Nicobar Islands</p>
-                <p className="font-bold">15000/-Rs</p>
-              </div>
-              <p className="font-semibold">
-              national", description: "A tropical paradise with pristine beaches and crystal-clear waters.
-              </p>
-              <div className="flex justify-between items-center">
-                <h2>10 days tour</h2>
-                <p className="flex items-center space-x-2 text-orange-400">
-                  <AiFillStar />
-                  <span>4.2</span>
-                </p>
-              </div>
-            </div>
-          </div>
+            </motion.div>
+          ))}
         </section>
       </div>
     </div>

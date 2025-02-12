@@ -1,75 +1,65 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-
-import {
-  AiFillFacebook,
-  AiFillInstagram,
-  AiFillTwitterSquare,
-  AiOutlineSearch,
-} from "react-icons/ai";
+import { AiFillFacebook, AiFillInstagram, AiFillTwitterSquare } from "react-icons/ai";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/effect-fade";
+import { EffectFade, Autoplay } from "swiper/modules";
 
 const Home = () => {
   return (
-    <React.Fragment>
-      <div className="w-full h-screen relative bg-black ">
-        <img
-          src="images/rajasthan.jpg"
-          alt=""
-          className="w-full h-full object-cover opacity-70"
-        />
-      </div>
+    <div className="relative w-full h-screen">
+      {/* Background Carousel */}
+      <Swiper
+        effect="fade"
+        modules={[EffectFade, Autoplay]}
+        autoplay={{ delay: 5000, disableOnInteraction: false }}
+        className="w-full h-full"
+      >
+        <SwiperSlide>
+          <img src="images/rajasthan.jpg" alt="Scenic View" className="w-full h-full object-cover brightness-50" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src="images/london.jpg" alt="London View" className="w-full h-full object-cover brightness-50" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src="images/bali.jpg" alt="Bali Beach" className="w-full h-full object-cover brightness-50" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src="images/peru.jpg" alt="Machu Picchu" className="w-full h-full object-cover brightness-50" />
+        </SwiperSlide>
+      </Swiper>
 
-      <nav className="w-full absolute backdrop-blur-[2px] top-0 p-5 flex justify-between text-white z-10">
-        <div>
-          <h1 className="text-3xl font-bold cursor-pointer">Travelone</h1>
+      {/* Overlay Content with Animation */}
+      <div className="absolute inset-0 flex flex-col justify-center items-center text-white text-center px-6 space-y-8 bg-black bg-opacity-20  z-10 ">
+        <h2 className="text-lg md:text-2xl font-semibold tracking-widest animate-slide-in bg-gradient-to-r from-yellow-400 to-red-500 text-transparent bg-clip-text drop-shadow-lg uppercase">
+          DISCOVER
+        </h2>
+        <h1 className="text-4xl md:text-6xl font-extrabold animate-slide-in bg-gradient-to-r from-blue-400 to-purple-600 text-transparent bg-clip-text drop-shadow-xl tracking-wide">
+          WORLD
+        </h1>
+        <p className="max-w-xl text-sm md:text-base text-gray-300 leading-relaxed animate-fade-in-delayed">
+          Journey Beyond the Ordinary - Discover, Explore, and Experience the World with Us! Unlock the World’s Most Spectacular Destinations – From Iconic Landmarks to Hidden Treasures, Let Your Next Adventure Begin with Unforgettable Journeys Tailored Just for You!
+        </p>
+        
+        {/* Buttons with Hover Effects */}
+        <div className="flex space-x-4 animate-fade-in-delayed">
+          <Link to="/payment" className="bg-white text-black font-semibold py-2 px-6 rounded-lg shadow-lg hover:bg-gray-300 transition-transform transform hover:scale-105 duration-300">
+            Road Map
+          </Link>
+          <Link to="/all-trip" className="border border-white text-white font-semibold py-2 px-6 rounded-lg shadow-lg hover:bg-white hover:text-black transition-transform transform hover:scale-105 duration-300">
+            Discover
+          </Link>
         </div>
-
-        <div>
-          <ul className="flex space-x-5 font-bold cursor-pointer text-gray-300">
-            <li className="text-white  hover:text-black hover:bottom-b">HOME</li>            
-            <li className="text-white  hover:text-black hover:bottom-b"><button><Link to="/about">ABOUT US</Link></button></li>
-            <li className="text-white  hover:text-black hover:bottom-b"><button><Link to="/cont">CONTACT US</Link></button></li>
-            <li className="text-white  hover:text-black hover:bottom-b"><button><Link to="/help">HELP   </Link></button></li>
-          </ul>
-
-          <div className="flex items-center space-x-2 mt-5">
-            <AiOutlineSearch className="text-xl cursor-pointer text-white " />
-
-            <input
-              className="bg-inherit border-b outline-0 border-white p-1 w-full text-white"
-              type="text"
-              placeholder="search"
-            />
-          </div>
-        </div>
-      </nav>
-
-      <div className="absolute top-0 h-screen flex flex-col space-y-10 justify-center items-center bg-black opacity-75 xl:w-1/3 sm:w-1/2 z-0">
-        <div className="text-white text-center space-y-5">
-          <h2 className="text-2xl font-bold cursor-default">D I S C O V E R</h2>
-          <h1 className="text-5xl font-bold cursor-default">W O R L D</h1>
-          <p className="mx-10 text-gray-400 cursor-default">
-          Journey Beyond the Ordinary - Discover, Explore, and Experience the World with Us!Unlock the World’s Most Spectacular Destinations – From Iconic Landmarks to Hidden Treasures, Let Your Next Adventure Begin with Unforgettable Journeys Tailored Just for You!
-          </p>
-        </div>
-
-        <div className="space-x-4">
-          <button className="bg-gray-300 py-2 px-5 rounded-md hover:bg-white hover:duration-300">
-          <Link to="/payment">Raod Map</Link>
-          </button>
-          <button className="text-gray-300 border rounded-md py-2 px-5 hover:bg-white hover:text-black hover:duration-300">
-          <Link to="/all-trip">Discover</Link>
-
-          </button>
-        </div>
-
-        <div className="text-white flex space-x-5">
-          <AiFillFacebook size={"2rem"} className="cursor-pointer" />
-          <AiFillInstagram size={"2rem"} className="cursor-pointer" />
-          <AiFillTwitterSquare size={"2rem"} className="cursor-pointer" />
+        
+        {/* Social Icons with Animation */}
+        <div className="flex space-x-6 animate-bounce">
+          <AiFillFacebook size={28} className="cursor-pointer hover:text-gray-400 transition duration-300" />
+          <AiFillInstagram size={28} className="cursor-pointer hover:text-gray-400 transition duration-300" />
+          <AiFillTwitterSquare size={28} className="cursor-pointer hover:text-gray-400 transition duration-300" />
         </div>
       </div>
-    </React.Fragment>
+    </div>
   );
 };
 

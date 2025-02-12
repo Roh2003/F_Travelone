@@ -1,86 +1,119 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const Discover = () => {
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: true });
+
   return (
-    <div className="w-4/5 m-auto cursor-default">
-      <p className="text-center text-3xl text-black font-serif mt-9">Travel you choose the destination,
-                            we offer you the experience.
-      </p>
+    <div ref={sectionRef} className="w-4/5 m-auto cursor-default text-gray-900">
+      <motion.p 
+        initial={{ opacity: 0, y: -100 }}
+        animate={isInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 2 }}
+        className="text-center text-4xl font-bold font-serif mt-12 text-gray-800"
+      >
+        Travel you choose the destination, we offer you the experience.
+      </motion.p>
       
-      <div className="w-full m-auto flex flex-col md:flex-row space-y-10 md:space-x-10 justify-between items-center py-10">
-        <div className="w-full space-y-5">
+      <div className="w-full flex flex-col md:flex-row space-y-10 md:space-x-10 justify-between items-center py-12">
+        <motion.div 
+          initial={{ opacity: 0, x: -150 }}
+          animate={isInView ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 2 }}
+          className="w-full space-y-6"
+        >
           <img
-            className="w-full drop-shadow-2xl rounded-lg border-8 border-stones-700 cursor-pointer opacity-80 hover:opacity-100 duration-200"
+            className="w-full rounded-lg shadow-lg border-4 border-gray-300 cursor-pointer opacity-90 hover:opacity-100 transition duration-300"
             src="images/london.jpg"
-            alt=""
+            alt="London"
           />
           <div>
-            <h2 className="font-bold">Explore the World with TravelOne.</h2>
-            <h1 className="text-2xl font-bold"></h1>
+            <h2 className="text-2xl font-semibold">Explore the World with TravelOne.</h2>
           </div>
-          <p className="text-lg">
-          Attract visitors to your travel planning website by offering engaging destination guides with itineraries, practical travel tips and hacks, interactive tools like a trip planner and budget calculator, user-generated content such as travel stories and reviews, stunning photography, and seasonal articles highlighting the best times to visit. Incorporate expert interviews, contests, and a newsletter for personalized updates, while leveraging social media and video content to create a vibrant community of travel enthusiasts.
+          <p className="text-lg text-gray-700 leading-relaxed">
+            Attract visitors to your travel planning website by offering engaging destination guides with itineraries, practical travel tips, interactive tools, user-generated content, and stunning photography. 
           </p>
-          <p className="text-sm">
-          
-          </p>
-        </div>
-        <div className="w-full space-y-4 text-left">
-          <h2 className="font-bold">TravelOne: Where Every Trip Tells a Story</h2>
-          <h1 className="font-bold text-2xl">Let's Travel Togather</h1>
-          <p className="text-sm">
-          At TravelOne, we believe that every journey is an opportunity for discovery. Whether you're dreaming of pristine beaches, vibrant cityscapes, or hidden gems off the beaten path, we’re here to turn your travel dreams into reality. Our expertly curated itineraries, exclusive deals, and personalized service ensure that your adventures are not just trips but unforgettable experiences. Join our community of explorers and let TravelOne guide you to your next great escape!
+        </motion.div>
+        
+        <motion.div 
+          initial={{ opacity: 0, x: 150 }}
+          animate={isInView ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 2 }}
+          className="w-full space-y-6 text-left"
+        >
+          <h2 className="text-2xl font-semibold">TravelOne: Where Every Trip Tells a Story</h2>
+          <h1 className="text-3xl font-bold text-indigo-700">Let's Travel Together</h1>
+          <p className="text-lg text-gray-700 leading-relaxed">
+            At TravelOne, we believe that every journey is an opportunity for discovery. Whether you're dreaming of pristine beaches, vibrant cityscapes, or hidden gems, we’re here to turn your travel dreams into reality.
           </p>
           <img
-            className="drop-shadow-2xl border-8 border-stones-700 rounded-lg cursor-pointer opacity-80 hover:opacity-100 duration-200"
+            className="w-full rounded-lg shadow-lg border-4 border-gray-300 cursor-pointer opacity-90 hover:opacity-100 transition duration-300"
             src="images/bali.jpg"
-            alt=""
+            alt="Bali"
           />
-        </div>
+        </motion.div>
       </div>
 
-      <div className="w-full h-[400px] my-10 relative">
+      <motion.div 
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={isInView ? { opacity: 1, scale: 1 } : {}}
+        transition={{ duration: 2 }}
+        className="w-full h-[400px] my-12 relative"
+      >
         <img
-          className="w-full h-full object-cover "
+          className="w-full h-full object-cover rounded-lg shadow-lg"
           src="images/image-8.jpg"
-          alt=""
+          alt="Travel"
         />
-        <div className="w-full h-full absolute top-0 flex justify-center items-center">
-          <h1 className="text-4xl text-white font-bold px-5 py-2 border cursor-pointer hover:bg-white hover:text-gray-500 hover:duration-300">
-          <Link to="/all-trip">View Details</Link>
+        <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-40 rounded-lg">
+          <h1 className="text-3xl text-white font-bold px-6 py-3 border border-white cursor-pointer hover:bg-white hover:text-black transition duration-300">
+            <Link to="/all-trip">View Details</Link>
           </h1>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="my-20 flex justify-between items-center xl:h-[500px]">
-        <div className="xl:w-[500px] w-1/3 lg:block hidden">
+      <div className="my-20 flex flex-col lg:flex-row justify-center items-center gap-10">
+        <motion.div 
+          initial={{ opacity: 0, x: -100 }}
+          animate={isInView ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 2 }}
+          className="lg:w-[450px] w-full"
+        >
           <img
-            className="w-full h-full object-cover"
+            className="w-full rounded-lg shadow-lg object-cover"
             src="images/image-33.jpg"
-            alt=""
+            alt="Travel Experience"
           />
-        </div>
-        <div className="xl:w-[500px] p-5 text-center space-y-5 sm:space-y-2">
-          <h1 className="md:text-xl sm:text-sm"></h1>
-          <h2 className="md:text-4xl sm:text-base">
-          Embrace Adventure: Your Next Journey Awaits!
-          </h2>
-          <p className="md:text-base sm:text-xs">
-          Life is a collection of moments, and traveling helps you create the most unforgettable ones. Step out of your comfort zone and discover new cultures, breathtaking landscapes, and delicious cuisines. Don’t wait for the perfect time—make every moment count and start exploring the world today
+        </motion.div>
+        <motion.div 
+          initial={{ opacity: 0, y: 50 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 2 }}
+          className="text-center space-y-6 max-w-2xl"
+        >
+          <h2 className="text-3xl font-bold text-gray-800">Embrace Adventure: Your Next Journey Awaits!</h2>
+          <p className="text-lg text-gray-700 leading-relaxed">
+            Life is a collection of moments, and traveling helps you create the most unforgettable ones. Step out of your comfort zone and explore new cultures, breathtaking landscapes, and delicious cuisines. Don’t wait—start exploring today!
           </p>
-          <button className="mt-5 px-5 py-2 border border-black hover:bg-gray-400 hover:duration-300">
+          <button className="mt-6 px-6 py-3 bg-indigo-600 text-white text-lg font-semibold rounded-lg shadow-md hover:bg-indigo-700 transition duration-300">
             <Link to="/all-trip">Book Now</Link>
           </button>
-        </div>
-        <div className="xl:w-[500px] w-1/3 lg:block hidden">
+        </motion.div>
+        <motion.div 
+          initial={{ opacity: 0, x: 100 }}
+          animate={isInView ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 2 }}
+          className="lg:w-[450px] w-full hidden lg:block"
+        >
           <img
-            className="w-full h-full object-cover"
+            className="w-full rounded-lg shadow-lg object-cover"
             src="images/image-33.jpg"
-            alt=""
+            alt="Travel Adventure"
           />
-        </div>
+        </motion.div>
       </div>
     </div>
   );

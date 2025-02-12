@@ -1,25 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { AiFillStar } from "react-icons/ai";
 
-
-
-import {
-  AiFillStar,
-  AiFillFacebook,
-  AiFillInstagram,
-  AiFillTwitterSquare,
-  AiOutlineWhatsApp,
-  AiOutlinePhone,
-  AiOutlineMessage,
-} from "react-icons/ai";
-
-import { CiLocationOn } from "react-icons/ci";
-import { TfiAlarmClock } from "react-icons/tfi";
-import { FaAppStore, FaGooglePlay } from "react-icons/fa";
-
-// import Trips from './info'
 const Trips = [
   {id:1,title:"Taj Mahal",image:"taj.jpg", price: 9999, category: "national", description: "A timeless symbol of love and one of the Seven Wonders of the World ", days: "9 days", rating: 4.8 },
   {id:2,title:"Jaipur, Rajasthan",image:"jaipur.jpg", price: 9999, category: "national", description: "The Pink City known for its majestic forts and vibrant culture. ", days: "9 days", rating: 4.8 },
@@ -48,211 +33,72 @@ const Trips = [
   {id:22,title:"Bali, Indonesia",image:"bali.jpg", price: 9999, category: "international", description: "A tropical paradise, famous for its serene beaches and vibrant culture. ", days: "15 days", rating: 4.1 },
   {id:23,title:"London, England",image:"london.jpg", price: 9999, category: "international", description: "A historic yet modern city, famous for the Big Ben, Buckingham Palace, and rich culture. ", days: "17 days", rating: 4.8 },
   {id:24,title:"Machu Picchu, Peru",image:"peru.jpg", price: 9999, category: "international", description: "The mystical Lost City of the Incas, hidden high in the Andes mountains. ", days: "9 days", rating: 4.8 },
-]
+];
 
+function AllTrip() {
+  const [allTrips, setAllTrips] = useState([]);
 
-
-function Alltrip() {
-  const [AllTrips,setAllTrips]=useState([]);
-  const filterNationalTrips = () => {
-    const filteredTrips = Trips.filter(trip => trip.category === "national");
-    setAllTrips(filteredTrips);
-  };
-    const filterInternationalTrips = () => {
-    const filteredTrips = Trips.filter(trip => trip.category === "international");
-    setAllTrips(filteredTrips);
-  };
   useEffect(() => {
     setAllTrips(Trips);
   }, []);
-  console.log(AllTrips)
 
+  const filterTrips = (category) => {
+    const filteredTrips = Trips.filter(trip => trip.category === category);
+    setAllTrips(filteredTrips);
+  };
 
-
-  function output(Trips){
-    console.log(Trips.id);
-    
-  }
-  
   return (
-        <>
-
-        <div className="my-0 mx-0 text-center">
-        <nav className="w-full absolute  top-0 p-4 flex justify-between text-black z-10  ">
-
-
-            <div>
-            <h1 className="text-3xl text-black font-bold cursor-pointer">Travelone</h1>
-            </div>
-
-            <div>
-            <ul className="flex space-x-5 font-bold cursor-pointer text-gray-300">
-                <li className="text-black hover:text-white hover:bottom-b">HOME</li>
-                <li className="text-black hover:text-white hover:bottom-b">ABOUT US</li>
-                <li className="text-black hover:text-white hover:bottom-b">CONTACT US</li>
-                <li className="text-black hover:text-white hover:bottom-b">HELP</li>
-            </ul>
-
-
-            </div>
-            </nav>
-
-          <div className=' text-center flex justify-evenly flex-wrap relative left-0 top-0 h-[70px] w-full bg-black bg-opacity-60'>
+    <div className="text-center py-10 bg-gray-100 min-h-screen mt-10">
+      <h1 className="text-4xl font-bold text-gray-900 mb-6">Choose Your Dream Trip</h1>
+      <div className="flex justify-center gap-6 mb-8">
+        <button 
+          className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300"
+          onClick={() => filterTrips('national')}
+        >National</button>
+        <button 
+          className="px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition duration-300"
+          onClick={() => filterTrips('international')}
+        >International</button>
+      </div>
+      <motion.div 
+        className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 px-6"
+        initial={{ opacity: 0 }} 
+        animate={{ opacity: 1 }} 
+        transition={{ duration: 1 }}
+      >
+        {allTrips.map(trip => (
+          <motion.div 
+            key={trip.id} 
+            className="bg-white shadow-lg rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300"
+            whileHover={{ scale: 1.05 }}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 2 }}
             
-            
-            
-            
-          </div>
-
-          <div className='flex justify-around'>
-
-          <button className='text-yellow-50 font-sans font-medium hover:bg-slate-300 hover:text-black
-             bg-slate-900 my-4 px-4 h-[50px] w-[90px]  rounded-lg transition-all duration-100'
-             onClick={filterNationalTrips}
-              >national</button>
-              <h1 className="text-4xl font-bold text-black relative top-3" >Choose Your Desire DreamTrip </h1>
-          <button className='text-yellow-50 font-sans font-medium hover:bg-slate-300 hover:text-black
-             bg-slate-900 my-4 px-4 h-[50px] w-[130px]  rounded-lg transition-all duration-100'onClick={filterInternationalTrips}>international</button>
-
-          </div>
-
-            <section className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 grid-cols-1 gap-10 my-10 justify-items-center items-center pb-10 border-b">
-                {AllTrips.map((trips)=>{
-                    return(
-                      <>
-                      {/* <div className="bg-white rounded-lg shadow-md p-4">{trips.title}</div> */}
-                      <div  key={trips.id} className="drop-shadow-2xl text-left rounded space-y-2 bg-slate-300 cursor-pointer  hover:opacity-100 duration-200 hover:">
-                    
-                    <img
-                    className="w-full h-1/2 object-cover rounded-t-lg "
-                    src={`images/${trips.image}`}
-                    alt=""
-                    />
-            <div className="p-4 space-y-4">
-              <div className="flex justify-between">
-                <p className="text-sm text-red-400">{trips.title}</p>
-                <p className="font-bold">{trips.price} /-Rs</p>
-              </div>
-              <p className="font-semibold">
-              {trips.description}
-              </p>
-              <div className="flex justify-between items-center">
-                <h2>{trips.days} days tour</h2>
-                <p className="flex items-center space-x-2 text-orange-400">
+          >
+            <img src={`images/${trip.image}`} alt={trip.title} className="w-full h-56 object-cover" />
+            <div className="p-4">
+              <h2 className="text-xl font-semibold text-gray-900">{trip.title}</h2>
+              <p className="text-gray-600 text-sm my-2">{trip.description}</p>
+              <div className="flex justify-between items-center mt-3">
+                <span className="text-gray-700 text-sm">{trip.days} tour</span>
+                <span className="flex items-center text-yellow-500">
                   <AiFillStar />
-                  <span>{trips.rating}</span>
-                </p>
-                <div>
-                <button className='h-9 w-9 bg-white  rounded-lg border border-black hover:bg-slate-700 hover:text-yellow-50 transition-all duration-100' onClick={output}>
-                <Link to={`/${trips.id}`}>
-                <FontAwesomeIcon icon={faArrowRight} />
+                  <span className="ml-1">{trip.rating}</span>
+                </span>
+              </div>
+              <div className="mt-4 flex justify-between items-center">
+                <span className="font-bold text-lg">{trip.price} /-Rs</span>
+                <Link to={`/${trip.id}`} className="bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition">
+                  <FontAwesomeIcon icon={faArrowRight} />
                 </Link>
-               
-                </button>
-                </div>
               </div>
             </div>
-          </div>
-         
-          </>
-                    )
-                })}
-                
-        </section>
-      </div>
-
-      
-      <footer className="w-full p-20 py-10 cursor-default bg-slate-300">
-      <div className="md:flex md:justify-between sm:grid sm:grid-cols-2 sm:justify-center items-center my-10">
-        <div className="space-y-5 py-5 border-b">
-          <h1 className="text-3xl font-bold cursor-pointer">Travelone</h1>
-          <div className="flex space-x-5">
-            <AiFillFacebook size={"1.5rem"} className="cursor-pointer" />
-            <AiFillInstagram size={"1.5rem"} className="cursor-pointer" />
-            <AiFillTwitterSquare size={"1.5rem"} className="cursor-pointer" />
-            <AiOutlineWhatsApp size={"1.5rem"} className="cursor-pointer" />
-          </div>
-          <div className="flex items-center space-x-2">
-            <AiOutlinePhone />
-            <p>(898)-645-434</p>
-          </div>
-          <div className="flex items-center space-x-2">
-            <AiOutlineMessage />
-            <p>(898)-645-434</p>
-          </div>
-          <div className="flex items-center space-x-2">
-            <CiLocationOn />
-            <p>(898)-645-434</p>
-          </div>
-          <div className="flex items-center space-x-2">
-            <TfiAlarmClock />
-            <p>(898)-645-434</p>
-          </div>
-        </div>
-
-        <div className="flex flex-col space-y-3">
-          <h1 className="font-bold text-xl">Travel</h1>
-          <a className="text-[15px] text-gray-400 hover:text-black" href="/">
-            About Us
-          </a>
-          <a className="text-[15px] text-gray-400 hover:text-black" href="/">
-            Services
-          </a>
-          <a className="text-[15px] text-gray-400 hover:text-black" href="/">
-            Blog
-          </a>
-          <a className="text-[15px] text-gray-400 hover:text-black" href="/">
-            Contact Us
-          </a>
-          <a className="text-[15px] text-gray-400 hover:text-black" href="/">
-            About Us
-          </a>
-        </div>
-
-        <div className="flex flex-col space-y-3">
-          <h1 className="font-bold text-xl">Acount</h1>
-          <a className="text-[15px] text-gray-400 hover:text-black" href="/">
-            Signup
-          </a>
-          <a className="text-[15px] text-gray-400 hover:text-black" href="/">
-            Login
-          </a>
-          <a className="text-[15px] text-gray-400 hover:text-black" href="/">
-            View Trips
-          </a>
-          <a className="text-[15px] text-gray-400 hover:text-black" href="/">
-            Contact
-          </a>
-          <a className="text-[15px] text-gray-400 hover:text-black" href="/">
-            About
-          </a>
-        </div>
-
-        <div className="flex flex-col space-y-3">
-          <h1 className="font-bold text-xl">Download</h1>
-          <p className="text-xl text-gray-400">
-            From App Store and Google Play
-          </p>
-          <button className="flex items-center space-x-4 text-left px-5 py-1 border rounded-md">
-            <FaAppStore size={"1.5rem"} />
-            <h1>
-              <p className="text-xl font-bold">Open On</p>
-              <span className="font-bold">App Store</span>
-            </h1>
-          </button>
-          <button className="flex items-center space-x-4 text-left px-5 py-1 border rounded-md">
-            <FaGooglePlay size={"1.5rem"} />                                  
-
-            <h1>
-              <p className="text-xl font-bold">Open On</p>
-              <span className="font-bold">App Store</span>
-            </h1>
-          </button>
-        </div>
-      </div>
-    </footer>
-      </>
-    )
+          </motion.div>
+        ))}
+      </motion.div>
+    </div>
+  );
 }
 
-export default Alltrip
+export default AllTrip;
