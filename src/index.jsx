@@ -2,22 +2,22 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import { RouterProvider, createBrowserRouter, createRoutesFromElements , Route } from "react-router-dom";
-import Layout from "./Layout";
-import Home from "./components/Home";
-import Places from "./components/Places";
-import Discover from "./components/Discover";
-import About from "./components/About";
-import Contact from "./components/Contact";
-import HelpAndFeedback from "./components/help";
-import Alltrip from "./components/Alltrip";
-import Payment from "./components/Payment";
-import Kashmir from "./components/national/kashmir";
-import Jaipur from "./components/national/Jaipur";
-import Varanasi from "./components/national/varanasi"
-import Goa from "./components/national/goa";
-import Paris from "./components/international/Paris";
-import NewYorkCity from "./components/international/New";
-import Taj from "./components/national/taj";
+import Layout from "./Layout.jsx";
+import Home from "./components/Home.jsx";
+import Places from "./components/Places.jsx";
+import Discover from "./components/Discover.jsx";
+import About from "./components/About.jsx";
+import Contact from "./components/Contact.jsx";
+import HelpAndFeedback from "./components/help.jsx";
+import Alltrip from "./components/Alltrip.jsx";
+import Payment from "./components/Payment.jsx";
+import Kashmir from "./components/national/kashmir.jsx";
+import Jaipur from "./components/national/Jaipur.jsx";
+import Varanasi from "./components/national/varanasi.jsx"
+import Goa from "./components/national/goa.jsx";
+import Paris from "./components/international/Paris.jsx";
+import NewYorkCity from "./components/international/New.jsx";
+import Taj from "./components/national/taj.jsx";
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
