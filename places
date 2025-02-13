@@ -1,99 +1,101 @@
 const tourPlan = [
   {
       day: 1,
-      title: 'Arrival in Goa',
+      title: 'Arrival in Varanasi',
       activities: [
-          'Arrive in Goa. Transfer to your beachside hotel.',
-          'Relax on the beach and explore the local area.',
-          'Dinner: Enjoy Goan seafood at a beachside shack.',
+          'Arrive in Varanasi. Transfer to your hotel.',
+          'Evening visit to the famous Ganga Aarti at Dashashwamedh Ghat.',
+          'Dinner: Enjoy local cuisine at a popular restaurant.',
       ],
   },
   {
       day: 2,
-      title: 'North Goa Beaches and Forts',
+      title: 'Varanasi - Temples and Ghats',
       activities: [
-          'Visit popular beaches like Baga, Calangute, and Anjuna.',
-          'Explore Aguada Fort and Chapora Fort for stunning views.',
-          'Enjoy the vibrant nightlife at a beach club.',
-          'Dinner: Dine at a popular seafood restaurant.',
+          'Early morning boat ride on the Ganges to see the sunrise and ghats.',
+          'Visit Kashi Vishwanath Temple, the most famous temple in Varanasi.',
+          'Explore Tulsi Manas Mandir and Durga Temple.',
+          'Dinner: Dine at a restaurant serving traditional vegetarian dishes.',
       ],
   },
   {
       day: 3,
-      title: 'Old Goa and Churches',
+      title: 'Varanasi - Sarnath',
       activities: [
-          'Day trip to Old Goa to visit Basilica of Bom Jesus and Se Cathedral.',
-          'Explore the Archaeological Museum and the Church of St. Cajetan.',
-          'Return to the hotel for a relaxing evening.',
-          'Dinner: Traditional Goan cuisine at a local restaurant.',
+          'Day trip to Sarnath (about 30 minutes).',
+          'Visit Dhamek Stupa and Sarnath Museum, where Buddha gave his first sermon.',
+          'Return to Varanasi for a peaceful evening by the ghats.',
+          'Dinner: Try street food at the local markets or a fine dining restaurant.',
       ],
   },
   {
       day: 4,
-      title: 'Dudhsagar Waterfalls and Spice Plantation',
+      title: 'Varanasi - Ramnagar Fort',
       activities: [
-          'Visit Dudhsagar Waterfalls, one of the highest waterfalls in India.',
-          'Enjoy a jeep safari to the falls and a nature walk.',
-          'Later, visit a spice plantation for a guided tour and lunch.',
-          'Return to the hotel for dinner and relaxation.',
+          'Explore Ramnagar Fort, located on the eastern bank of the Ganges.',
+          'Visit the museum inside the fort and learn about the rich history of Varanasi.',
+          'Dinner: Relax with a traditional thali meal at a local restaurant.',
       ],
   },
   {
       day: 5,
-      title: 'South Goa Beaches',
+      title: 'Varanasi - Exploring Old City',
       activities: [
-          'Explore South Goa’s quieter beaches like Palolem, Colva, and Agonda.',
-          'Enjoy water sports like parasailing and jet skiing.',
-          'Relax by the beach and catch a stunning sunset.',
-          'Dinner: Local seafood at a beachside restaurant.',
+          'Spend the day walking through the narrow lanes of the old city.',
+          'Visit Bharat Mata Temple and the historic Banaras Hindu University.',
+          'Dinner: Enjoy dinner at a rooftop restaurant overlooking the Ganges.',
       ],
   },
   {
       day: 6,
-      title: 'Adventure Day: Water Sports and Scuba Diving',
+      title: 'Varanasi - Day Trip to Vindhyachal',
       activities: [
-          'Spend the day enjoying water activities like scuba diving, snorkeling, and windsurfing.',
-          'Explore the underwater marine life at Grande Island or Bat Island.',
-          'Return to the hotel for a relaxing evening.',
-          'Dinner: Dine at a beachfront restaurant with live music.',
+          'Day trip to Vindhyachal (about 2 hours).',
+          'Visit Vindhyavasini Temple, one of the Shakti Peethas.',
+          'Return to Varanasi for overnight stay.',
+          'Dinner: Dine at a restaurant serving local delicacies.',
       ],
   },
   {
       day: 7,
-      title: 'Panaji City and Cruise',
+      title: 'Varanasi - Cultural Exploration',
       activities: [
-          'Visit Panaji, the capital of Goa. Explore the Latin Quarter of Fontainhas.',
-          'Visit the Church of Our Lady of the Immaculate Conception and the local markets.',
-          'In the evening, enjoy a boat cruise on the Mandovi River.',
-          'Dinner: Enjoy Goan cuisine on a cruise boat.',
+          'Visit the Bharat Kala Bhavan Museum, showcasing artifacts and art from the region.',
+          'Attend a classical music or dance performance in the evening.',
+          'Dinner: Enjoy a late-night meal at your hotel or a nearby restaurant.',
       ],
   },
   {
       day: 8,
-      title: 'Shopping and Local Markets',
+      title: 'Varanasi - Chunar Fort',
       activities: [
-          'Spend the day shopping at the famous Anjuna Flea Market or Mapusa Market.',
-          'Pick up souvenirs, local handicrafts, and Goan spices.',
-          'Free time for beach relaxation or spa at your hotel.',
-          'Dinner: Enjoy dinner at a local Goan restaurant.',
+          'Day trip to Chunar Fort (about 1.5 hours).',
+          'Explore the historic fort and enjoy scenic views of the Ganges.',
+          'Return to Varanasi for a peaceful evening by the river.',
+          'Dinner: Enjoy dinner at a local restaurant.',
       ],
   },
   {
       day: 9,
-      title: 'Day Trip to Chorao Island',
+      title: 'Varanasi - Shopping and Relaxation',
       activities: [
-          'Take a day trip to Chorao Island, known for its bird sanctuary.',
-          'Explore the island and enjoy birdwatching and nature walks.',
-          'Return to the hotel for an evening of leisure.',
-          'Dinner: Dine at a popular restaurant known for its Goan-Portuguese fusion cuisine.',
+          'Spend the day shopping for Banarasi silk sarees and handicrafts in the local markets.',
+          'Free time for relaxation or a spa session at your hotel.',
+          'Farewell dinner featuring traditional Banarasi cuisine.',
       ],
   },
   {
       day: 10,
-      title: 'Departure from Goa',
+      title: 'Departure from Varanasi',
       activities: [
-          'Free time for beach relaxation or last-minute shopping.',
-          'Transfer to Goa Airport for your departure.',
+          'Free time for last-minute shopping or exploring the ghats.',
+          'Transfer to Varanasi Airport or Railway Station for departure.',
       ],
   },
 ];
+
+
+
+Varanasi, one of the world’s oldest living cities, is a vibrant tapestry of culture, history, and spirituality. Situated on the banks of the River Ganges, Varanasi is famous for its ghats, where pilgrims perform rituals and attend the mesmerizing Ganga Aarti. The city is a center for learning and the arts, particularly known for its classical music, silk weaving, and Hindu temples. A visit to Varanasi is an immersive experience in India's cultural and spiritual heritage.
+
+src="https://www.youtube.com/embed/1udJsv1VcII"

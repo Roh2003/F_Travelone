@@ -89,7 +89,7 @@ function AllTrip() {
               </div>
               <div className="mt-4 flex justify-between items-center">
                 <span className="font-bold text-lg">{trip.price} /-Rs</span>
-                <Link to={`/${trip.id}`} className="bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition">
+                <Link to={`destination/${trip.id}`} className="bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition">
                   <FontAwesomeIcon icon={faArrowRight} />
                 </Link>
               </div>

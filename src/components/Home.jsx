@@ -32,10 +32,10 @@ const Home = () => {
 
       {/* Overlay Content with Animation */}
       <div className="absolute inset-0 flex flex-col justify-center items-center text-white text-center px-6 space-y-8 bg-black bg-opacity-20  z-10 ">
-        <h2 className="text-lg md:text-2xl font-semibold tracking-widest animate-slide-in bg-gradient-to-r from-yellow-400 to-red-500 text-transparent bg-clip-text drop-shadow-lg uppercase">
+        <h2 className="text-5xl md:text-6xl font-semibold tracking-widest animate-slide-in bg-gradient-to-r from-yellow-400 to-red-500 text-transparent bg-clip-text drop-shadow-lg uppercase">
           DISCOVER
         </h2>
-        <h1 className="text-4xl md:text-6xl font-extrabold animate-slide-in bg-gradient-to-r from-blue-400 to-purple-600 text-transparent bg-clip-text drop-shadow-xl tracking-wide">
+        <h1 className="text-4xl md:text-5xl font-extrabold animate-slide-in bg-gradient-to-r from-blue-400 to-purple-600 text-transparent bg-clip-text drop-shadow-xl tracking-wide">
           WORLD
         </h1>
         <p className="max-w-xl text-sm md:text-base text-gray-300 leading-relaxed animate-fade-in-delayed">

@@ -1,183 +1,191 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import { motion } from 'framer-motion';
 import {
     AiFillFacebook,
     AiFillInstagram,
     AiFillTwitterSquare,
-    AiOutlineSearch,
 } from "react-icons/ai";
 
-function Paris() {
+const tourPlan = [
+    {
+        day: 1,
+        title: 'Arrival in Paris',
+        activities: [
+            'Arrive at Charles de Gaulle Airport and transfer to your hotel.',
+            'Take an evening walk along the Champs-Élysées and enjoy the city lights.',
+            'Dinner: Try classic French cuisine at a bistro or a restaurant with an Eiffel Tower view.',
+        ],
+    },
+    {
+        day: 2,
+        title: 'Eiffel Tower & Seine River Cruise',
+        activities: [
+            'Visit the Eiffel Tower and enjoy panoramic views from the top.',
+            'Stroll along the Seine River and explore Trocadéro Gardens.',
+            'Evening: Take a Seine River cruise to see Paris illuminated.',
+            'Dinner: Try French onion soup and duck confit at a traditional restaurant.',
+        ],
+    },
+    {
+        day: 3,
+        title: 'Louvre Museum & Notre-Dame Cathedral',
+        activities: [
+            'Spend the morning at the Louvre Museum, seeing masterpieces like the Mona Lisa.',
+            'Walk to the Île de la Cité and visit Notre-Dame Cathedral.',
+            'Explore the charming streets of the Latin Quarter.',
+            'Dinner: Enjoy a crêpe or quiche Lorraine in a quaint café.',
+        ],
+    },
+    {
+        day: 4,
+        title: 'Versailles Palace & Gardens',
+        activities: [
+            'Take a day trip to the Palace of Versailles, exploring the Hall of Mirrors and gardens.',
+            'Stroll through the Grand Trianon and the Queen’s Hamlet.',
+            'Dinner: Dine at a restaurant in Versailles before returning to Paris.',
+        ],
+    },
+    {
+        day: 5,
+        title: 'Montmartre & Sacré-Cœur',
+        activities: [
+            'Explore the artistic neighborhood of Montmartre.',
+            'Visit the Sacré-Cœur Basilica for breathtaking views of Paris.',
+            'Discover hidden gems like the Place du Tertre, filled with street artists.',
+            'Dinner: Try coq au vin at a traditional Montmartre restaurant.',
+        ],
+    },
+    {
+        day: 6,
+        title: 'Musée d\'Orsay & Seine Walk',
+        activities: [
+            'Visit the Musée d\'Orsay, home to Van Gogh, Monet, and Renoir.',
+            'Stroll along the Seine River and browse Shakespeare & Company bookstore.',
+            'Explore the Saint-Germain-des-Prés district.',
+            'Dinner: Enjoy a candlelit dinner at a classic Parisian brasserie.',
+        ],
+    },
+    {
+        day: 7,
+        title: 'Arc de Triomphe & Shopping on Champs-Élysées',
+        activities: [
+            'Climb to the top of the Arc de Triomphe for incredible views.',
+            'Shop at luxury boutiques and flagship stores on Champs-Élysées.',
+            'Visit Galeries Lafayette for a shopping experience.',
+            'Dinner: Enjoy a fancy dinner at a Michelin-starred restaurant.',
+        ],
+    },
+    {
+        day: 8,
+        title: 'Disneyland Paris (Optional) or Le Marais',
+        activities: [
+            'Option 1: Take a day trip to Disneyland Paris for a magical experience.',
+            'Option 2: Explore Le Marais, known for its historic streets and chic boutiques.',
+            'Visit the Place des Vosges, Paris’s oldest planned square.',
+            'Dinner: Try falafel or French-Jewish delicacies in Le Marais.',
+        ],
+    },
+    {
+        day: 9,
+        title: 'Catacombs & Sainte-Chapelle',
+        activities: [
+            'Discover the underground Catacombs of Paris for a spooky adventure.',
+            'Visit the Sainte-Chapelle, famous for its stunning stained-glass windows.',
+            'Enjoy a relaxing afternoon at the Jardin du Luxembourg.',
+            'Dinner: Try escargots (snails) or boeuf bourguignon at a gourmet restaurant.',
+        ],
+    },
+    {
+        day: 10,
+        title: 'Departure from Paris',
+        activities: [
+            'Enjoy your last morning with coffee and croissants at a Parisian café.',
+            'Do some last-minute shopping at Rue Cler or Boulevard Haussmann.',
+            'Transfer to Charles de Gaulle Airport for departure.',
+        ],
+    },
+];
 
-    const tourPlan = [
-        {
-            day: 1,
-            title: 'Arrival in Paris',
-            activities: [
-                'Arrive at Charles de Gaulle Airport. Transfer to your hotel.',
-                'Take a leisurely stroll along the Seine River and explore the surroundings.',
-                'Dinner: Enjoy French cuisine at a local bistro.',
-            ],
-        },
-        {
-            day: 2,
-            title: 'Eiffel Tower and Trocadéro',
-            activities: [
-                'Visit the iconic Eiffel Tower. Option to go up to the second or third floor for panoramic views.',
-                'Explore the Trocadéro Gardens for beautiful photos of the Eiffel Tower.',
-                'Dinner: Traditional French dinner at a restaurant with a view of the tower.',
-            ],
-        },
-        {
-            day: 3,
-            title: 'Louvre Museum and Île de la Cité',
-            activities: [
-                'Spend the morning at the Louvre Museum, home to famous artworks like the Mona Lisa and Venus de Milo.',
-                'In the afternoon, explore Île de la Cité, including Notre-Dame Cathedral and Sainte-Chapelle.',
-                'Dinner: Dine at a French brasserie near the Seine River.',
-            ],
-        },
-        {
-            day: 4,
-            title: 'Montmartre and Sacré-Cœur',
-            activities: [
-                'Visit the bohemian neighborhood of Montmartre, known for its artistic history.',
-                'Climb to the Sacré-Cœur Basilica for incredible views of Paris.',
-                'Explore the art market at Place du Tertre and enjoy a café on a terrace.',
-                'Dinner: Enjoy a French dinner in a Montmartre restaurant.',
-            ],
-        },
-        {
-            day: 5,
-            title: 'Day Trip to Versailles',
-            activities: [
-                'Take a day trip to the Palace of Versailles, famous for its stunning gardens and Hall of Mirrors.',
-                'Enjoy a guided tour of the palace and the sprawling grounds.',
-                'Return to Paris in the evening for dinner.',
-                'Dinner: Traditional French meal at a Parisian restaurant.',
-            ],
-        },
-        {
-            day: 6,
-            title: 'Seine River Cruise and Latin Quarter',
-            activities: [
-                'Start the day with a scenic cruise on the Seine River, passing landmarks like the Eiffel Tower, Louvre, and Notre-Dame.',
-                'Explore the Latin Quarter, known for its lively atmosphere and historic cafés.',
-                'Dinner: Dine at a traditional French bistro in the Latin Quarter.',
-            ],
-        },
-        {
-            day: 7,
-            title: 'Champs-Élysées and Arc de Triomphe',
-            activities: [
-                'Stroll along the famous Champs-Élysées, with its luxury shops, cafés, and theaters.',
-                'Climb to the top of the Arc de Triomphe for amazing views of Paris, including the Eiffel Tower.',
-                'Dinner: Dinner at a chic restaurant on the Champs-Élysées.',
-            ],
-        },
-        {
-            day: 8,
-            title: 'Museums and Art Galleries',
-            activities: [
-                'Visit the Musée d\'Orsay, known for its impressionist artworks, including pieces by Monet and Van Gogh.',
-                'Later, explore modern art at the Centre Pompidou.',
-                'Dinner: Dine at a modern French restaurant near the museum district.',
-            ],
-        },
-        {
-            day: 9,
-            title: 'Le Marais and Shopping',
-            activities: [
-                'Explore the trendy Le Marais district, known for its boutiques, galleries, and historic buildings.',
-                'Spend time shopping for fashion, art, and souvenirs.',
-                'Dinner: Enjoy a traditional dinner at a café in Le Marais.',
-            ],
-        },
-        {
-            day: 10,
-            title: 'Departure from Paris',
-            activities: [
-                'Free time for last-minute shopping or exploring the local neighborhood.',
-                'Transfer to Charles de Gaulle Airport for departure.',
-            ],
-        },
-    ];
 
+
+const testimonials = [
+    { name: "John Doe", review: "Goa was a dream! The itinerary was perfect, and we had an amazing time." },
+    { name: "Jane Smith", review: "Loved every bit of the trip! Great beaches, great food, and great memories." }
+];
+
+const Paris = () => {
     return (
-        <>
-            <div className='h-screen w-full'>
-                <div className="w-full h-screen relative">
-                    <img
-                        src="images/paris.jpg"
-                        alt="Paris"
-                        className="w-full h-full object-cover opacity-70"
-                    />
-                </div>
+        <div className="relative bg-gradient-to-r  from-blue-400 to-purple-500 min-h-screen text-white">
+            
 
-                <nav className="w-full absolute backdrop-blur-[3px] top-0 p-4 flex justify-between text-black z-10">
-                    <div>
-                        <h1 className="text-3xl text-black font-bold cursor-pointer">Travelone</h1>
-                    </div>
+            <motion.div className="w-full h-screen flex flex-col justify-center items-center text-center"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1 }}>
+                <h1 className="text-6xl font-bold drop-shadow-lg">Explore Paris</h1>
+                <motion.p className="text-xl mt-4 max-w-2xl drop-shadow-lg"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.5 }}>
+                    Paris, the "City of Light," is known for its timeless charm, iconic landmarks, world-class museums, and romantic ambiance. From the Eiffel Tower and Louvre Museum to the chic boutiques and cafés lining the streets, Paris offers a perfect mix of history, culture, fashion, and art. Whether you’re admiring the stunning architecture or indulging in French cuisine, Paris is a city that captures the hearts of all who visit.
+                </motion.p>
+            </motion.div>
 
-                    <div>
-                        <ul className="flex space-x-5 font-bold cursor-pointer text-gray-300">
-                            <li className="text-black hover:text-white">HOME</li>
-                            <li className="text-black hover:text-white">ABOUT US</li>
-                            <li className="text-black hover:text-white">CONTACT US</li>
-                            <li className="text-black hover:text-white">HELP</li>
+            <div className="p-10 space-y-10">
+                <motion.h2 className="text-4xl font-bold text-center"
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}>
+                    10-Day Paris Tour Plan
+                </motion.h2>
+                {tourPlan.map((dayInfo) => (
+                    <motion.div key={dayInfo.day} className="bg-white text-black p-6 rounded-xl shadow-lg transform transition duration-500 hover:scale-105"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileHover={{ scale: 1.05 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: dayInfo.day * 0.1 }}>
+                        <h2 className="text-2xl font-bold">Day {dayInfo.day}: {dayInfo.title}</h2>
+                        <ul className="list-disc ml-5 mt-2">
+                            {dayInfo.activities.map((activity, index) => (
+                                <li key={index} className="mt-1 text-lg">{activity}</li>
+                            ))}
                         </ul>
-                    </div>
-                </nav>
-
-                <div className="absolute top-[70px] w-full text-center z-10">
-                    <h1 className="text-5xl font-bold text-black">Explore Paris</h1>
-                    <div className="border-b-4 border-black w-2/4 mx-auto mt-2"></div>
-                </div>
-
-                <div>
-                    <div className='absolute top-1/4 w-full h-[450px] z-10'>
-                        <p className='absolute left-[50px] text-black text-2xl backdrop-blur-sm text-center'>
-                            Paris, the "City of Light," is known for its timeless charm, iconic landmarks, world-class museums, and romantic ambiance. From the Eiffel Tower and Louvre Museum to the chic boutiques and cafés lining the streets, Paris offers a perfect mix of history, culture, fashion, and art. Whether you’re admiring the stunning architecture or indulging in French cuisine, Paris is a city that captures the hearts of all who visit.
-                        </p>
-                    </div>
-                </div>
-
-                <div className="mb-6 p-4 bg-white shadow-md rounded-md">
-                    <h2 className="text-2xl font-semibold">Watch Our Paris Tour Preview</h2>
-                    <iframe
-                        width="100%"
-                        height="500"
-                        src="https://www.youtube.com/embed/dqQO3h9B_wg"
-                        title="YouTube video player"
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                    ></iframe>
-                </div>
-
-                <div className="p-5 bg-gray-100">
-                    <h1 className="text-3xl font-bold text-center mb-5">10-Day Paris Tour Plan</h1>
-                    {tourPlan.map((dayInfo) => (
-                        <div key={dayInfo.day} className="mb-6 p-4 bg-white shadow-md rounded-md">
-                            <h2 className="text-2xl font-semibold">Day {dayInfo.day}: {dayInfo.title}</h2>
-                            <ul className="list-disc ml-5 mt-2">
-                                {dayInfo.activities.map((activity, index) => (
-                                    <li key={index} className="mt-1">{activity}</li>
-                                ))}
-                            </ul>
-                        </div>
-                    ))}
-                </div>
-
-                <div className='flex justify-center align-center'>
-                    <button className='bg-black rounded-md text-white text-2xl p-2'>
-                        <Link to="/payment">Book Tour</Link>
-                    </button>
-                </div>
+                    </motion.div>
+                ))}
             </div>
-        </>
+
+            <div className="mb-6 p-4 bg-white shadow-md rounded-md">
+                <h2 className="text-2xl font-semibold text-black">Watch Our Paris Tour Preview</h2>
+                <iframe
+                    width="100%"
+                    height="500"
+                    src="https://www.youtube.com/embed/dqQO3h9B_wg"
+                    title="YouTube video player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                ></iframe>
+            </div>
+
+            <div className="p-10 bg-white text-black rounded-xl shadow-lg">
+                <h2 className="text-2xl font-bold text-center">What Our Travelers Say</h2>
+                {testimonials.map((testimonial, index) => (
+                    <div key={index} className="mt-4 p-4 bg-gray-100 rounded-md shadow-sm">
+                        <p className="text-lg">"{testimonial.review}"</p>
+                        <p className="text-right font-bold">- {testimonial.name}</p>
+                    </div>
+                ))}
+            </div>
+
+            <div className="flex justify-center mt-10">
+                <motion.button className="bg-gradient-to-r from-black to-gray-700 rounded-md text-white text-2xl p-3 px-6 shadow-lg transform transition duration-500 hover:scale-110"
+                    whileHover={{ scale: 1.1 }}>
+                    <Link to="/payment">Book Tour</Link>
+                </motion.button>
+            </div>
+        </div>
     );
-}
+};
 
 export default Paris;
