@@ -11,12 +11,12 @@ import Contact from "./components/Contact";
 import HelpAndFeedback from "./components/help";
 import Alltrip from "./components/Alltrip";
 import Payment from "./components/Payment";
-import Kashmir from "./components/national/kashmir.jsx";
-import Jaipur from "./components/national/Jaipur.jsx";
-import Varanasi from "./components/national/varanasi.jsx"
-import Goa from "./components/national/goa.jsx";
-import Paris from "./components/international/Paris.jsx";
-import NewYorkCity from "./components/international/New.jsx";
+import Kashmir from "./components/national/kashmir";
+import Jaipur from "./components/national/Jaipur";
+import Varanasi from "./components/national/varanasi"
+import Goa from "./components/national/goa";
+import Paris from "./components/international/Paris";
+import NewYorkCity from "./components/international/New";
 import Taj from "./components/national/taj";
 
 
