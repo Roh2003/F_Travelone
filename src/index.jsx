@@ -13,7 +13,7 @@ import Alltrip from "./components/Alltrip";
 import Payment from "./components/Payment";
 import Kashmir from "./components/national/kashmir";
 import Jaipur from "./components/national/Jaipur";
-import Varanasi from "./components/national/Varanasi";
+import Varanasi from "./components/national/varanasi";
 import Goa from "./components/national/Goa";
 import Paris from "./components/international/Paris";
 import NewYorkCity from "./components/international/New";
