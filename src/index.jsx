@@ -11,13 +11,13 @@ import Contact from "./components/Contact.jsx";
 import HelpAndFeedback from "./components/help.jsx";
 import Alltrip from "./components/Alltrip.jsx";
 import Payment from "./components/Payment.jsx";
-import Kashmir from "./components/national/kashmir.jsx";
+import Kashmir from "./components/national/Kashmir.jsx";
 import Jaipur from "./components/national/Jaipur.jsx";
-import Varanasi from "./components/national/varanasi.jsx"
-import Goa from "./components/national/goa.jsx";
+import Varanasi from "./components/national/Va.jsx";
+import Goa from "./components/national/Goa.jsx";
 import Paris from "./components/international/Paris.jsx";
 import NewYorkCity from "./components/international/New.jsx";
-import Taj from "./components/national/taj.jsx";
+import Taj from "./components/national/Taj.jsx";
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
