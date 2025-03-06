@@ -11,7 +11,7 @@ import Contact from "./components/Contact";
 import HelpAndFeedback from "./components/help";
 import Alltrip from "./components/Alltrip";
 import Payment from "./components/Payment";
-import Kashmir from "./components/national/Kashmir.jsx";
+// import Kashmir from "./components/national/Kashmir.jsx";
 import Jaipur from "./components/national/Jaipur";
 import Varanasi from "./components/national/Va";
 import Goa from "./components/national/goa";
@@ -46,8 +46,8 @@ const router = createBrowserRouter(
       <Route path="all-trip" element={<Alltrip />} />
 
       {/* National Destinations */}
-      <Route path="destination/5" element={<Kashmir />} />
-      <Route path="all-trip/destination/5" element={<Kashmir />} />
+      {/* <Route path="destination/5" element={<Kashmir />} /> */}
+      {/* <Route path="all-trip/destination/5" element={<Kashmir />} /> */}
       <Route path="destination/2" element={<Jaipur />} />
       <Route path="all-trip/destination/2" element={<Jaipur />} />
       <Route path="destination/6" element={<Varanasi />} />
