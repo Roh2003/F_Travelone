@@ -6,7 +6,7 @@ import Login from "./components/Login";
 import SignUp from "./components/Signup";
 import AllTrip from "./components/Alltrip";
 import Payment from "./components/Payment";
-import Kashmir from "./components/national/kashmir";
+import Kashmir from "./components/national/Kashmir";
 import Jaipur from "./components/national/Jaipur";
 import Varanasi from "./components/national/varanasi"
 import Goa from "./components/national/goa"
