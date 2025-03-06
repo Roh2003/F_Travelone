@@ -6,7 +6,15 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import { EffectFade, Autoplay } from "swiper/modules";
 
+const raj_image = "https://res.cloudinary.com/dgwsfoozs/image/upload/v1741280951/rajasthan_umkbdt.jpg";
+const peru_image = "https://res.cloudinary.com/dgwsfoozs/image/upload/v1741281557/peru_xmbeon.jpg"
+const bali_image = "https://res.cloudinary.com/dgwsfoozs/image/upload/v1741281555/bali_pxzbv7.jpg"
+const london_image = "https://res.cloudinary.com/dgwsfoozs/image/upload/v1741281547/london_f1dfui.jpg"
+
+export { raj_image, peru_image, bali_image, london_image };
+
 const Home = () => {
+
   return (
     <div className="relative w-full h-screen">
       {/* Background Carousel */}
@@ -17,16 +25,16 @@ const Home = () => {
         className="w-full h-full"
       >
         <SwiperSlide>
-          <img src="images/rajasthan.jpg" alt="Scenic View" className="w-full h-full object-cover brightness-50" />
+          <img src={raj_image} alt="Scenic View" className="w-full h-full object-cover brightness-50" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="images/london.jpg" alt="London View" className="w-full h-full object-cover brightness-50" />
+          <img src={london_image} alt="London View" className="w-full h-full object-cover brightness-50" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="images/bali.jpg" alt="Bali Beach" className="w-full h-full object-cover brightness-50" />
+          <img src={bali_image} alt="Bali Beach" className="w-full h-full object-cover brightness-50" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="images/peru.jpg" alt="Machu Picchu" className="w-full h-full object-cover brightness-50" />
+          <img src={peru_image} alt="Machu Picchu" className="w-full h-full object-cover brightness-50" />
         </SwiperSlide>
       </Swiper>
 
@@ -63,4 +71,7 @@ const Home = () => {
   );
 };
 
+
+
 export default Home;
+

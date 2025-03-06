@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
+const bali_image = "https://res.cloudinary.com/dgwsfoozs/image/upload/v1741281555/bali_pxzbv7.jpg"
+const london_image = "https://res.cloudinary.com/dgwsfoozs/image/upload/v1741281547/london_f1dfui.jpg"
+
 const Discover = () => {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true });
@@ -27,7 +30,7 @@ const Discover = () => {
         >
           <img
             className="w-full rounded-lg shadow-lg border-4 border-gray-300 cursor-pointer opacity-90 hover:opacity-100 transition duration-300"
-            src="images/london.jpg"
+            src={london_image}
             alt="London"
           />
           <div>
@@ -51,7 +54,7 @@ const Discover = () => {
           </p>
           <img
             className="w-full rounded-lg shadow-lg border-4 border-gray-300 cursor-pointer opacity-90 hover:opacity-100 transition duration-300"
-            src="images/bali.jpg"
+            src={bali_image}
             alt="Bali"
           />
         </motion.div>
