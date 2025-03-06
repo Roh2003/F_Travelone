@@ -2,19 +2,7 @@ import React from "react";
 // import { Login } from "./components/Login";
 // import { SignUp } from "./components/Signup";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Login from "./components/Login";
-import SignUp from "./components/Signup";
-import AllTrip from "./components/Alltrip";
-import Payment from "./components/Payment";
-import Kashmir from "./components/national/Kashmir";
-import Jaipur from "./components/national/Jaipur";
-import Varanasi from "./components/national/varanasi"
-import Goa from "./components/national/goa"
-import Paris from "./components/international/Paris";
-import NewYorkCity from "./components/international/New";
-import About from "./components/About";
-import Contact from "./components/Contact";
-import HelpAndFeedback from "./components/help";
+
 import Header from "./components/Header"
 
 

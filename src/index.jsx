@@ -11,7 +11,7 @@ import Contact from "./components/Contact";
 import HelpAndFeedback from "./components/help";
 import Alltrip from "./components/Alltrip";
 import Payment from "./components/Payment";
-import Kashmir from "./components/national/Kashmir";
+import Kashmir from "./components/national/Kashmir.jsx";
 import Jaipur from "./components/national/Jaipur";
 import Varanasi from "./components/national/Va";
 import Goa from "./components/national/goa";
